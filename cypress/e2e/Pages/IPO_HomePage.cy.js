@@ -4,7 +4,7 @@
 describe('IPO Home Page ',function(){
 
 
- it('checks image load times', () => {
+ it('IPO Home Page', () => {
      cy.visit('https://ipo.jainam.in');
  
      // Wait for the page to load (adjust timeout as needed)
