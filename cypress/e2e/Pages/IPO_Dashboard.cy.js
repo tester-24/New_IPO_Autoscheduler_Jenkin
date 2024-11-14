@@ -1,5 +1,5 @@
-describe("Open Jainam IPO link and click button", () => {
-  it("Clicks on button to open Google Play Store and close tab", () => {
+describe("IPO_Dashboard", () => {
+  it("IPO_Dashboard", () => {
     // Step 1: Visit the main IPO page
     cy.visit("https://ipo.jainam.in/home");
     cy.wait(5000);
