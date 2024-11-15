@@ -73,7 +73,7 @@ describe('IPO Home Page ',function(){
   // Step 4: After 2 seconds, navigate back to the original page
   cy.visit('https://ipo.jainam.in');
   // Go back to the original page
-
+  cy.wait(2000)
   cy.get(
     '[href="https://play.google.com/store/apps/details?id=com.jainam.space&hl=en_IN&gl=US"]'
   )
