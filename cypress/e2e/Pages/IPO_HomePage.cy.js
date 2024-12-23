@@ -167,7 +167,7 @@ describe('IPO Home Page ',function(){
                     cy.get('[data-kendo-grid-item-index="0"] > [data-kendo-grid-column-index="5"] > .btn-grid-bid > .btn').click({force:true},{timeout:5000},{multiple:true})
                     cy.wait(1000)
                     //click on ok button for new dailog box
-                    cy.get('.bd-example-modal-md > .modal-dialog > .modal-content > .modal-footer > .btn').click()
+                  //  cy.get('.bd-example-modal-md > .modal-dialog > .modal-content > .modal-footer > .btn').click()
                     cy.wait(1000)
                     cy.visit('https://ipo.jainam.in');
             }
