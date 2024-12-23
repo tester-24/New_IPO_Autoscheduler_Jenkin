@@ -116,7 +116,7 @@ describe("IPO_Dashboard", () => {
    // cy.xpath('/html/body/app-root/app-layout/app-maincontent/app-bid/app-nse/section/div/div/div[1]/div[2]/form/div/div[2]/div/div[5]/div/div[1]/div/div/div[3]/a/span').click()
    
    //click on ok button on new dailogue message
-   cy.get('.bd-example-modal-md > .modal-dialog > .modal-content > .modal-footer > .btn').click()
+  // cy.get('.bd-example-modal-md > .modal-dialog > .modal-content > .modal-footer > .btn').click()
 
    // click on lot size 
    cy.wait(1000)
