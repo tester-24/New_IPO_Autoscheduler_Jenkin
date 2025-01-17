@@ -1,32 +1,43 @@
 describe("IPO_Dashboard", () => {
   it("IPO_Dashboard", () => {
     // Step 1: Visit the main IPO page
-    cy.visit("https://ipo.jainam.in/home");
-    cy.wait(5000);
-    cy.viewport(1280, 720);
-
-    cy.get(":nth-child(3) > .ng-star-inserted > .btn").click();
-    //   // //cy.get('.close > span').click()
-    cy.wait(1000);
-
-    // Enter Username
-    cy.get(".userid_wrap > .input_wrap > .text_form").type("DK2203434");
-    //cy.wait(2000)
-
-    // Enter Password
-    cy.get("#LoginPassword").type("Mahesh@237");
-    // cy.wait(4000)
-
-    //Click on Login Button
-    cy.get(".login_button_wrap").click();
-    cy.wait(3000);
-
-    // Enter OTP
-    cy.get('[formcontrolname="otp1"]').type("6");
-    cy.get('[formcontrolname="otp2"]').type("2");
-    cy.get('[formcontrolname="otp3"]').type("7");
-    cy.get('[formcontrolname="otp4"]').type("0");
-
+    cy.visit('https://ipo.jainam.in/#/startup')
+    cy.wait(3000)
+    cy.get('.banner-text > :nth-child(3) > .button > .btn').click()
+    //Enter the userid
+    cy.wait(500)
+    cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('Dk2203434')
+    //click on continue button
+    cy.wait(500)
+    cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/button[1]').click()
+    // enter password
+    cy.wait(500)
+    cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/div/div/div/kendo-textbox/input').type('Mahesh@237')
+    //click on continue button
+    cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/button').click()
+    // enter the pin 
+    cy.get('#pin1').type(6)
+    cy.get('#pin2').type(2)
+    cy.get('#pin3').type(7)
+    cy.get('#pin4').type(0)
+    cy.wait(5000)
+    cy.window().then((win) => {
+      cy.stub(win, 'open').callsFake((url) => {
+        win.location.href = url;
+      });
+    });
+    cy.wait(2000)
+    cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[1]').click({force:true})
+    // Verify that the page or URL is updated
+    cy.wait(4000)
+    cy.url().should('include', 'https://ipo.jainam.in/home');
+    Cypress.on('uncaught:exception', (err) => {
+      // returning false here prevents Cypress from
+      // failing the test
+      console.log('Cypress detected uncaught exception: ', err);
+      return false;
+    });
+       
     // // Step 2: Click on the button that opens the Google Play Store page
     // // Assuming it's a link, you can target it using an appropriate selector
     // cy.get('[href="https://apps.apple.com/my/app/jainam-space/id1536402914"]')
@@ -247,6 +258,13 @@ describe("IPO_Dashboard", () => {
 
 //  })
 //if(cy.xpath('/html/body/app-root/app-layout/app-maincontent/app-ipolist/section[1]/div/div[3]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr/td[2]/div/span').should('exist'))
+
+    // logout flow
+            //click on profile icon 
+            cy.get('.dropdown > [_ngcontent-ng-c1585925410=""] > #navbarDropdown').click()
+            //click on logout option
+            cy.xpath('/html/body/app-root/app-layout/app-headerpenal/header/div/nav/ul/li[3]/div/div/div/div[2]/ul/li[5]/a').click()
+            cy.wait(1000)
 
   })
  
