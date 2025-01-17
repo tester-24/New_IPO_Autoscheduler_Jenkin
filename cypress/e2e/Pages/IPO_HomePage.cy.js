@@ -49,15 +49,15 @@ it('Ipo _Jainam', () => {
 
  // Step 2: Click on the button that opens the Google Play Store page
     // Assuming it's a link, you can target it using an appropriate selector
-    // cy.get('[href="https://apps.apple.com/my/app/jainam-space/id1536402914"]')
-    // .invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
-    // .click({timeout:3000}); // Click the button/link
+    cy.get('[href="https://apps.apple.com/my/app/jainam-space/id1536402914"]')
+    .invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
+    .click({timeout:3000}); // Click the button/link
 
   // Step 3: Wait for 2 seconds
-//  cy.wait(5000);
+  cy.wait(3000);
 
   // Step 4: After 2 seconds, navigate back to the original page
-  //cy.visit('https://ipo.jainam.in');
+  cy.visit('https://ipo.jainam.in');
   // Go back to the original page
   
   cy.get(
