@@ -25,12 +25,16 @@ describe('IPO ',function(){
       cy.get('#pin3').type(3)
       cy.get('#pin4').type(4)
       cy.wait(500)
-     
+
+
+         //click on comet icon 
+      cy.xpath('/html/body/app-layout/app-dashboard/section/div/div/div/div/a[3]').invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
+       .click();
       //click on comet icon 
    //   cy.wait(1000)
     // cy.xpath('/html/body/app-layout/app-dashboard/section/div/div/div/div/a[3]').click()
 //1126  cy.visit('https://comet.jainam.in/#/RedirectToComet/jplus?FUYCBR1okdShXktQpNY9eKcY/ygpu+/dbMGloSO8e+TizmymVWizUXTkbRih7Nlm+ums5DO110X11zEx9kqXkpRqg248NtjJFPCFvpZVD7Yv5MncQucP6/uCDLyRDiOqV5ke6c8S28oyK/u37qlYnA=="')
- cy.visit('https://comet.jainam.in/#/RedirectToComet/jplus?ZwBItNiHlSjGOFoQ70VAqIXFM+R+ULuAsFMUUbl3MHtZL2lLSNGhdT/YucNYlDCyWfmMrnTmBnfK8l/Bk8/a3rRXzQD/zaDVoiB9UdNsSIEPMO9Zcsgrr0H8wO0rv5vFZrmq/LwPpR9Epxv4RloinA==')        
+// cy.visit('https://comet.jainam.in/#/RedirectToComet/jplus?ZwBItNiHlSjGOFoQ70VAqIXFM+R+ULuAsFMUUbl3MHtZL2lLSNGhdT/YucNYlDCyWfmMrnTmBnfK8l/Bk8/a3rRXzQD/zaDVoiB9UdNsSIEPMO9Zcsgrr0H8wO0rv5vFZrmq/LwPpR9Epxv4RloinA==')        
  // click on Reports
         cy.wait(4000)
        cy.get('#PartnerDropdown').click()
