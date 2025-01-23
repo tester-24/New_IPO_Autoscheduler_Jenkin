@@ -1,5 +1,5 @@
 /// <reference types="cypress"/
-
+describe("IPO_HomePage", () => {
 it('Ipo _Jainam', () => {
     cy.visit('https://ipo.jainam.in/#/startup')
     cy.wait(3000)
@@ -237,7 +237,7 @@ it('Ipo _Jainam', () => {
             cy.wait(1000)
 
 
-        
+})  
                     
       })
 
