@@ -25,7 +25,7 @@ it('Ipo _Jainam', () => {
         win.location.href = url;
       });
     });
-    cy.wait(2000)
+    cy.wait(4000)
     cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[1]').click({force:true})
     
     // Verify that the page or URL is updated
