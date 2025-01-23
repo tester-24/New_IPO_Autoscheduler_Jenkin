@@ -62,8 +62,8 @@ describe('IPO ',function(){
    // logout flow
    cy.get('.user > [_ngcontent-ng-c1468596661=""] > #navbarDropdown').click({force:true})
    // click on logout
-   cy.wait(500)
-   cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click()
+   cy.wait(1000)
+   cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
    cy.wait(1000)
 
 
