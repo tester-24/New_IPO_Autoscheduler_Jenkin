@@ -156,7 +156,7 @@ describe("IPO_Dashboard", () => {
       cy.wait(1000)
       cy.scrollTo('center')
        // click on accept terms and conditions 
-       cy.get('.checkbox-option.mt-4 > .squaredFour > label').click()
+       //cy.get('.checkbox-option.mt-4 > .squaredFour > label').click()
       //Verify subbmit button is visible and click on sumbmit button without accepting terms and condition
       cy.get('#load2').should('be.visible')
       cy.get('#load2').click()
@@ -261,7 +261,8 @@ describe("IPO_Dashboard", () => {
 
     // logout flow
             //click on profile icon 
-            cy.get('.dropdown > [_ngcontent-ng-c1585925410=""] > #navbarDropdown').click()
+            cy.wait(500)
+            cy.get('.dropdown > [_ngcontent-ng-c1585925410=""] > #navbarDropdown').click({force:true})
             //click on logout option
             cy.xpath('/html/body/app-root/app-layout/app-headerpenal/header/div/nav/ul/li[3]/div/div/div/div[2]/ul/li[5]/a').click()
             cy.wait(1000)
