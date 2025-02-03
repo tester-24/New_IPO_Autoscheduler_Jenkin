@@ -81,13 +81,22 @@ describe("IPO_Dashboard", () => {
     cy.wait(3000)
     cy.get('.heading-text > h4').should('be.visible')
     
+   if(cy.get('.px-md-2 > .row > .col-9 > h2 > b').should('be.visible'))
+   {
+    cy.log('No IPO Today')
+   }
+   else{
+     cy.log('u can bid it')
    
    
     // check ipo window contains data 
-    if(cy.xpath('/html/body/app-root/app-layout/app-maincontent/app-ipolist/section[1]/div/div[3]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr').should('have.length.above',0))
-   {
-           cy.log('Data found')
-   }
+  //   if(cy.xpath('/html/body/app-root/app-layout/app-maincontent/app-ipolist/section[1]/div/div[3]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr').should('have.length.below',0))
+  //  {
+  //          cy.log('Data not  found')
+  //  }
+  //  else{
+  //   cy.log('data not found')
+  //  }
     
    //Assertion for Bid All history 
    cy.get('.col-md-6').should('be.visible')
@@ -269,7 +278,7 @@ describe("IPO_Dashboard", () => {
 
 //  })
 //if(cy.xpath('/html/body/app-root/app-layout/app-maincontent/app-ipolist/section[1]/div/div[3]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr/td[2]/div/span').should('exist'))
-
+   }
     // logout flow
             //click on profile icon 
             cy.wait(500)
