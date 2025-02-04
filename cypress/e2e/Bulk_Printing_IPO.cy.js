@@ -1,5 +1,5 @@
 /// <reference types="cypress"/> 
-describe('IPO ',function(){
+describe('IPO Bulk Printing',function(){
     it('IPO Bulk Printing',function()
     {
       cy.visit('https://comet.jainam.in/#/startup')
