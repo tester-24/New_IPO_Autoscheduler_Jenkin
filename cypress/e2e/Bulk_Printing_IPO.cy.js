@@ -28,8 +28,8 @@ describe('IPO Bulk Printing',function(){
 
 
          //click on comet icon 
-      cy.xpath('/html/body/app-layout/app-dashboard/section/div/div/div/div/a[3]').invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
-       .click();
+      // cy.xpath('/html/body/app-layout/app-dashboard/section/div/div/div/div/a[3]').invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
+      //  .click();
       //click on comet icon 
    //   cy.wait(1000)
     // cy.xpath('/html/body/app-layout/app-dashboard/section/div/div/div/div/a[3]').click()
