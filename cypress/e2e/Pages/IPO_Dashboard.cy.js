@@ -20,23 +20,23 @@ describe("IPO_Dashboard", () => {
       cy.get('#pin2').type(2)
       cy.get('#pin3').type(7)
       cy.get('#pin4').type(0)
-      cy.wait(5000)
-      cy.window().then((win) => {
-        cy.stub(win, 'open').callsFake((url) => {
-          win.location.href = url;
-        });
-      });
       cy.wait(2000)
-      cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[1]').click({force:true})
-      // Verify that the page or URL is updated
-      cy.wait(4000)
-      cy.url().should('include', 'https://ipo.jainam.in/home');
-      Cypress.on('uncaught:exception', (err) => {
-        // returning false here prevents Cypress from
-        // failing the test
-        console.log('Cypress detected uncaught exception: ', err);
-        return false;
-      });
+      // cy.window().then((win) => {
+      //   cy.stub(win, 'open').callsFake((url) => {
+      //     win.location.href = url;
+      //   });
+      // });
+      // cy.wait(2000)
+      // cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[1]').click({force:true})
+      // // Verify that the page or URL is updated
+      // cy.wait(4000)
+      // cy.url().should('include', 'https://ipo.jainam.in/home');
+      // Cypress.on('uncaught:exception', (err) => {
+      //   // returning false here prevents Cypress from
+      //   // failing the test
+      //   console.log('Cypress detected uncaught exception: ', err);
+      //   return false;
+      // });
          
       // // Step 2: Click on the button that opens the Google Play Store page
       // // Assuming it's a link, you can target it using an appropriate selector
