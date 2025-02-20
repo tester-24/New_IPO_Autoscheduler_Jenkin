@@ -3,7 +3,7 @@ describe("IPO_Dashboard", () => {
       // Step 1: Visit the main IPO page
       cy.visit('https://ipo.jainam.in/#/startup')
       cy.wait(3000)
-      cy.get('.banner-text > :nth-child(3) > .button > .btn').click()
+      cy.get('.banner-text > :nth-child(3) > .button > .btn').click({force:true})
       //Enter the userid
       cy.wait(500)
       cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('Dk2203434')
