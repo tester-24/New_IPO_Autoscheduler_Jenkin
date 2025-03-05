@@ -19,7 +19,7 @@ it('Ipo _Jainam', () => {
     cy.get('#pin2').type(2)
     cy.get('#pin3').type(7)
     cy.get('#pin4').type(0)
-    cy.wait(2000)
+    cy.wait(5000)
     // cy.window().then((win) => {
     //   cy.stub(win, 'open').callsFake((url) => {
     //     win.location.href = url;
@@ -51,7 +51,7 @@ it('Ipo _Jainam', () => {
     // Assuming it's a link, you can target it using an appropriate selector
     cy.get('[href="https://apps.apple.com/my/app/jainam-space/id1536402914"]')
     .invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
-    .click({timeout:3000}); // Click the button/link
+    .click({force:true},{timeout:3000}); // Click the button/link
 
   // Step 3: Wait for 2 seconds
   cy.wait(3000);
