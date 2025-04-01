@@ -6,7 +6,7 @@ describe('IPO Bulk Printing',function(){
       cy.wait(1000)
       cy.get('.login-space-btn').click({force:true})
       //Login Flow
-      cy.wait(3000)
+      cy.wait(5000)
     
       cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('1516')
       
