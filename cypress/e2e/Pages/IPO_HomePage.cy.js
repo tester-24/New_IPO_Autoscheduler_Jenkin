@@ -47,18 +47,18 @@ it('Ipo _Jainam', () => {
   //cy.xpath('/html/body/app-root/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[1]').invoke("removeAttr", "target").click({timeout:3000},{force:true});
    //cy.visit('https://uatipo.jainam.in/RedirectToIpo/jplus?C00pt84Lr1xV4FEHBfb%2FuZXbVj2wMvjVR%205e%20GXGVwVfc4xLjYZZwcsLo8oxylRQ8Z1hN71Rfxj1H26Gkz6cfA=%3D')
 
- // Step 2: Click on the button that opens the Google Play Store page
-    // Assuming it's a link, you can target it using an appropriate selector
-    cy.get('[href="https://apps.apple.com/my/app/jainam-space/id1536402914"]')
-    .invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
-    .click({force:true},{timeout:3000}); // Click the button/link
+ // // Step 2: Click on the button that opens the Google Play Store page
+ //    // Assuming it's a link, you can target it using an appropriate selector
+ //    cy.get('[href="https://apps.apple.com/my/app/jainam-space/id1536402914"]')
+ //    .invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
+ //    .click({force:true},{timeout:3000}); // Click the button/link
 
-  // Step 3: Wait for 2 seconds
-  cy.wait(3000);
+ //  // Step 3: Wait for 2 seconds
+ //  cy.wait(3000);
 
-  // Step 4: After 2 seconds, navigate back to the original page
-  cy.visit('https://ipo.jainam.in');
-  // Go back to the original page
+ //  // Step 4: After 2 seconds, navigate back to the original page
+ //  cy.visit('https://ipo.jainam.in');
+ //  // Go back to the original page
   
   cy.get(
     '[href="https://play.google.com/store/apps/details?id=com.jainam.space&hl=en_IN&gl=US"]'
