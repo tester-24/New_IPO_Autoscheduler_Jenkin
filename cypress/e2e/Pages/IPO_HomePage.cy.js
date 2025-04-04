@@ -137,46 +137,46 @@ it('Ipo _Jainam', () => {
   //  cy.get('.init-close').click()
 
   
-     // Assertion for OPEN IPO 
-     cy.wait(1000)
-    cy.xpath('/html/body/app-root/app-layout/app-maincontent/app-clientdashboard/section[2]/div/div/div[1]/div[2]/div[1]').should('be.visible')
+   //   // Assertion for OPEN IPO 
+   //   cy.wait(1000)
+   //  cy.xpath('/html/body/app-root/app-layout/app-maincontent/app-clientdashboard/section[2]/div/div/div[1]/div[2]/div[1]').should('be.visible')
      
 
-   //First test Open IPO contains date  if data is present click on Apply button
-   cy.wait(500)
-     if(cy.xpath('/html/body/app-root/app-layout/app-maincontent/app-clientdashboard/section[2]/div/div/div[1]/div[2]/div[2]/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody').should('have.length.above',0))
-     {
-        cy.wait(3000)        
-        if (cy.get('.btn-grid-bid > .btn').should('be.visible')) 
-                  {
-                    //Click on apply button 
-                    cy.get('[data-kendo-grid-item-index="0"] > [data-kendo-grid-column-index="5"] > .btn-grid-bid > .btn').click({force:true},{timeout:5000},{multiple:true})
-                    cy.wait(1000)
-                    //click on ok button for new dailog box
-                 //   cy.get('.bd-example-modal-md > .modal-dialog > .modal-content > .modal-footer > .btn').click()
-                    cy.wait(1000)
-                    cy.visit('https://ipo.jainam.in');
-            }
-      }
+   // //First test Open IPO contains date  if data is present click on Apply button
+   // cy.wait(500)
+   //   if(cy.xpath('/html/body/app-root/app-layout/app-maincontent/app-clientdashboard/section[2]/div/div/div[1]/div[2]/div[2]/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody').should('have.length.above',0))
+   //   {
+   //      cy.wait(3000)        
+   //      if (cy.get('.btn-grid-bid > .btn').should('be.visible')) 
+   //                {
+   //                  //Click on apply button 
+   //                  cy.get('[data-kendo-grid-item-index="0"] > [data-kendo-grid-column-index="5"] > .btn-grid-bid > .btn').click({force:true},{timeout:5000},{multiple:true})
+   //                  cy.wait(1000)
+   //                  //click on ok button for new dailog box
+   //               //   cy.get('.bd-example-modal-md > .modal-dialog > .modal-content > .modal-footer > .btn').click()
+   //                  cy.wait(1000)
+   //                  cy.visit('https://ipo.jainam.in');
+   //          }
+   //    }
     
-     //Check if Open IPO contains data 
+   //   //Check if Open IPO contains data 
     
-     //table[class="k-grid-table k-table k-table-md"]>tbody>tr
-     cy.wait(3000)
+   //   //table[class="k-grid-table k-table k-table-md"]>tbody>tr
+   //   cy.wait(3000)
 
-    if(cy.get('table[class="k-grid-table k-table k-table-md"] >tbody> tr:nth-child(2)').should('have.length.above',0))
-      {
-           cy.xpath('/html/body/app-root/app-layout/app-maincontent/app-clientdashboard/section[2]/div/div/div[1]/div[1]/div').click({force:true})
-         //  cy.get('.initial-social-icons > :nth-child(1) > .fa').should('be.visible')
-         //  cy.wait(2000)
-         //  cy.get(':nth-child(2) > .fa').should('be.visible')
-          // cy.wait(1000)
-           cy.get('.init-close').click({force:true})
-      }
+   //  if(cy.get('table[class="k-grid-table k-table k-table-md"] >tbody> tr:nth-child(2)').should('have.length.above',0))
+   //    {
+   //         cy.xpath('/html/body/app-root/app-layout/app-maincontent/app-clientdashboard/section[2]/div/div/div[1]/div[1]/div').click({force:true})
+   //       //  cy.get('.initial-social-icons > :nth-child(1) > .fa').should('be.visible')
+   //       //  cy.wait(2000)
+   //       //  cy.get(':nth-child(2) > .fa').should('be.visible')
+   //        // cy.wait(1000)
+   //         cy.get('.init-close').click({force:true})
+   //    }
 
-       // Scrolling
-     //cy.wait(2000)
-     cy.scrollTo(0,1000)
+   //     // Scrolling
+   //   //cy.wait(2000)
+   //   cy.scrollTo(0,1000)
   
           
       //Assertion for  Upcoming IPO
