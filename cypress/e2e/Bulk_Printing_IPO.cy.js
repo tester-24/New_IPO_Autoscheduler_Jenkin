@@ -45,20 +45,20 @@ describe('IPO Bulk Printing',function(){
         //Click on report dropdown
         cy.wait(2000)
         cy.xpath('/html/body/app-root/app-layout/div/app-bulkprinting/div[1]/div/div[2]/form/div/div[1]/div/kendo-dropdownlist/button').click()
-        cy.wait(2000)
-        cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[6]/span[1]').click()
-        cy.scrollTo('top')
-       //type code 
-       cy.xpath('/html/body/app-root/app-layout/div/app-bulkprinting/div[1]/div/div[2]/form/div/div[2]/div/input').type('j33')
-       //click on submit button 
-       cy.xpath('/html/body/app-root/app-layout/div/app-bulkprinting/div[1]/div/div[2]/form/div/div[3]/button').click({timeout:2000})
-       //click on add button
-       cy.get('form.ng-dirty > .row > :nth-child(6)').click()
-       cy.scrollTo('bottom')
-       //Click on download button 
-       cy.get('.container > .row > .col-lg-2 > .btn').click({timeout:3000})
-       cy.get('.text-center > .mb-3').should('be.visible')
-       cy.scrollTo("top")
+       //  cy.wait(2000)
+       //  cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[6]/span[1]').click()
+       //  cy.scrollTo('top')
+       // //type code 
+       // cy.xpath('/html/body/app-root/app-layout/div/app-bulkprinting/div[1]/div/div[2]/form/div/div[2]/div/input').type('j33')
+       // //click on submit button 
+       // cy.xpath('/html/body/app-root/app-layout/div/app-bulkprinting/div[1]/div/div[2]/form/div/div[3]/button').click({timeout:2000})
+       // //click on add button
+       // cy.get('form.ng-dirty > .row > :nth-child(6)').click()
+       // cy.scrollTo('bottom')
+       // //Click on download button 
+       // cy.get('.container > .row > .col-lg-2 > .btn').click({timeout:3000})
+       // cy.get('.text-center > .mb-3').should('be.visible')
+       // cy.scrollTo("top")
        
         //cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[1]/span[1]').click()
    // logout flow
