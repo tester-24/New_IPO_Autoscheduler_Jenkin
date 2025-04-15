@@ -2,7 +2,7 @@ describe("IPO_Dashboard", () => {
   it("IPO_Dashboard", () => {
     // Step 1: Visit the main IPO page
     cy.visit('https://ipo.jainam.in/#/startup')
-    cy.wait(3000)
+    cy.wait(5000)
     cy.get('.banner-text > :nth-child(3) > .button > .btn').click()
     //Enter the userid
     cy.wait(500)
