@@ -64,8 +64,9 @@ describe('IPO ',function(){
           if (itemCount > 6) 
             {
             cy.log('IPO was there');
-            cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[6]/span[1]').click()
-            cy.scrollTo('top')
+          //  cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[6]/span[1]').click()
+             cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[6]/span[1]').click({force:true})
+                cy.scrollTo('top')
             //type code 
             cy.xpath('/html/body/app-root/app-layout/div/app-bulkprinting/div[1]/div/div[2]/form/div/div[2]/div/input').type('j33')
             //click on submit button 
