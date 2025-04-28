@@ -270,13 +270,17 @@ describe("IPO_Dashboard", () => {
   //  })
   //if(cy.xpath('/html/body/app-root/app-layout/app-maincontent/app-ipolist/section[1]/div/div[3]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr/td[2]/div/span').should('exist'))
   
-      // logout flow
-              //click on profile icon 
-              cy.wait(500)
-              cy.get('.dropdown > [_ngcontent-ng-c1585925410=""] > #navbarDropdown').click({force:true})
-              //click on logout option
-              cy.xpath('/html/body/app-root/app-layout/app-headerpenal/header/div/nav/ul/li[3]/div/div/div/div[2]/ul/li[5]/a').click()
-              cy.wait(1000)
+    
+            // logout flow
+            //click on profile icon 
+           // cy.get('.dropdown > [_ngcontent-ng-c1585925410=""] > #navbarDropdown').click()
+           cy.get('.navbar-brand').click()
+           cy.wait(1000)
+           cy.get('.dropdown').click({force:true}) 
+           //click on logout option
+          //  cy.xpath('/html/body/app-root/app-layout/app-headerpenal/header/div/nav/ul/li[3]/div/div/div/div[2]/ul/li[5]/a').click()
+          cy.get('.mt-4 > :nth-child(5)').click({force:true}) 
+          cy.wait(1000)
   
     })
    
