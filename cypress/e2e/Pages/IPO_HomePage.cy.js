@@ -231,10 +231,12 @@ it('Ipo _Jainam', () => {
   
             // logout flow
             //click on profile icon 
-            cy.get('.dropdown > [_ngcontent-ng-c1585925410=""] > #navbarDropdown').click()
-            //click on logout option
-            cy.xpath('/html/body/app-root/app-layout/app-headerpenal/header/div/nav/ul/li[3]/div/div/div/div[2]/ul/li[5]/a').click()
-            cy.wait(1000)
+           // cy.get('.dropdown > [_ngcontent-ng-c1585925410=""] > #navbarDropdown').click()
+           cy.get('.dropdown').click() 
+           //click on logout option
+          //  cy.xpath('/html/body/app-root/app-layout/app-headerpenal/header/div/nav/ul/li[3]/div/div/div/div[2]/ul/li[5]/a').click()
+          cy.get('.mt-4 > :nth-child(5)').click({force:true}) 
+          cy.wait(1000)
 
 
 })  
