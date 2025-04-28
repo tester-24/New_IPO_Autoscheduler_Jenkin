@@ -108,8 +108,9 @@ describe('IPO ',function(){
     cy.xpath("//li[@class='nav-item dropdown user ml-md-2 ng-star-inserted']//a[@id='navbarDropdown']").click({force:true})
             // click on logout
    cy.wait(2000)
-   cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
-   cy.wait(1000)
+  // cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
+    cy.get('.mt-4 > :nth-child(4)').click({force:true})  
+            cy.wait(1000)
 
 
      })
