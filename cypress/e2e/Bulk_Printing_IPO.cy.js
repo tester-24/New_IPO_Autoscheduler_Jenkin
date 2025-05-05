@@ -14,7 +14,7 @@ describe('IPO ',function(){
       cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/button[1]').click()
       
       // enter password
-      cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/div/div/div/kendo-textbox/input').type('Jainam@123')
+      cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/div/div/div/kendo-textbox/input').type('J@inam$789')
       
       //click on continue button
       cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/button').click()
