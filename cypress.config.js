@@ -3,7 +3,8 @@ module.exports = {
   reporter: 'cypress-mochawesome-reporter',
  // projectId: "v4584h", 
 // projectId: "2wk4wq",
- projectId: "2n5vqb",
+// projectId: "2n5vqb",
+ projectId: "idnamh",
   reporterOptions: {
    
     charts: true,
