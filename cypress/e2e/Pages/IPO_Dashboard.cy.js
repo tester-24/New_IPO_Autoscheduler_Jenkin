@@ -6,20 +6,20 @@ describe("IPO_Dashboard", () => {
       cy.get('.banner-text > :nth-child(3) > .button > .btn').click()
       //Enter the userid
       cy.wait(500)
-      cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('Dk2203434')
+      cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('1126')
       //click on continue button
       cy.wait(500)
       cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/button[1]').click()
       // enter password
       cy.wait(500)
-      cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/div/div/div/kendo-textbox/input').type('Mahesh@237')
+      cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/div/div/div/kendo-textbox/input').type('J@inam$789')
       //click on continue button
       cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/button').click()
       // enter the pin 
-      cy.get('#pin1').type(6)
+      cy.get('#pin1').type(1)
       cy.get('#pin2').type(2)
-      cy.get('#pin3').type(7)
-      cy.get('#pin4').type(0)
+      cy.get('#pin3').type(3)
+      cy.get('#pin4').type(4)
       cy.wait(5000)
       // cy.window().then((win) => {
       //   cy.stub(win, 'open').callsFake((url) => {
