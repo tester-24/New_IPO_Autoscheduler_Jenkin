@@ -112,8 +112,8 @@ cy.wait(5000);
             // click on logout
    cy.wait(2000)
   // cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
-    cy.xpath('//li[@class='nav_item nav_desktop_user_dropdown p_relative']//li[8]//a[1]').click({force:true})   
-            cy.wait(1000)
+    cy.xpath("//label[normalize-space()='Log Out']").click({force:true}) 
+    cy.wait(1000)
 
 
      })
