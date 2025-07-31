@@ -6,7 +6,7 @@ describe('IPO Bulk Printing ',function(){
 cy.wait(5000);
     cy.viewport(1280, 720);
 
-    cy.get(":nth-child(3) > .ng-star-inserted > .btn").click();
+    cy.get(".login-space-btn.textdn").click();
     cy.wait(3000);
 
   // Enter Username
