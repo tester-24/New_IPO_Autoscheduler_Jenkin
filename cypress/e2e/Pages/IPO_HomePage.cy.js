@@ -243,7 +243,7 @@ it('Ipo _Jainam', () => {
            cy.get('.dropdown').click() 
            //click on logout option
           //  cy.xpath('/html/body/app-root/app-layout/app-headerpenal/header/div/nav/ul/li[3]/div/div/div/div[2]/ul/li[5]/a').click()
-          cy.get('body > app-root:nth-child(1) > app-layout:nth-child(2) > app-partner-header-navbar:nth-child(1) > div:nth-child(1) > div:nth-child(1) > nav:nth-child(1) > div:nth-child(3) > ul:nth-child(1) > li:nth-child(2) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(9) > a:nth-child(1) > span:nth-child(3)').click({force:true}) 
+          cy.xpath('//li[@class='nav_item nav_desktop_user_dropdown p_relative']//li[8]//a[1]').click({force:true}) 
           cy.wait(1000)
 
 
