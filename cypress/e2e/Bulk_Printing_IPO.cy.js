@@ -8,7 +8,7 @@ describe('IPO Bulk Printing ',function(){
       //Login Flow
       cy.wait(5000)
     
-      cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('1516')
+      cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('1126')
       
       //click on continue button
       cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/button[1]').click()
