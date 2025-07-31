@@ -3,29 +3,32 @@ describe('IPO Bulk Printing ',function(){
     it('IPO Bulk Printing',function()
     {
       cy.visit('https://comet.jainam.in/#/startup')
-      cy.wait(1000)
-      cy.get('.login-space-btn').click({force:true})
-      //Login Flow
-      cy.wait(5000)
-    
-      cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('1126')
-      
-      //click on continue button
-      cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/button[1]').click()
-      
-      // enter password
-      cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/div/div/div/kendo-textbox/input').type('J@inam$789')
-      
-      //click on continue button
-      cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/button').click()
-      
-      // enter the pin 
-      cy.get('#pin1').type(1)
-      cy.get('#pin2').type(2)
-      cy.get('#pin3').type(3)
-      cy.get('#pin4').type(4)
-      //cy.wait(500)
-      cy.wait(2000);
+cy.wait(5000);
+    cy.viewport(1280, 720);
+
+    cy.get(":nth-child(3) > .ng-star-inserted > .btn").click();
+    cy.wait(3000);
+
+  // Enter Username
+  cy.xpath("//kendo-textbox[@id='user_id']//input[@type='text']").type('1126');
+
+  cy.wait(2000)
+     
+  cy.xpath("//button[normalize-space()='Continue']").click();
+
+  // Enter Password    
+  cy.xpath("//input[@placeholder='Enter Password']").type("J@inam$789");
+  cy.xpath("//button[normalize-space()='Continue']").click();
+
+  //Click on Login Button
+  cy.wait(3000);
+
+  // Enter OTP
+  cy.xpath("//input[@id='pin1']").type("1");
+  cy.xpath("//input[@id='pin2']").type("2");
+  cy.xpath("//input[@id='pin3']").type("3");
+  cy.xpath("//input[@id='pin4']").type("4");
+  cy.wait(5000);
       cy.xpath("//button[@aria-label='Close']").click({force:true});
      
      
@@ -109,7 +112,7 @@ describe('IPO Bulk Printing ',function(){
             // click on logout
    cy.wait(2000)
   // cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
-    cy.get('.mt-4 > :nth-child(4)').click({force:true})  
+    cy.xpath('//li[@class='nav_item nav_desktop_user_dropdown p_relative']//li[8]//a[1]').click({force:true})   
             cy.wait(1000)
 
 
