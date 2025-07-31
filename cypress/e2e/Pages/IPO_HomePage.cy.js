@@ -2,24 +2,32 @@
 describe("IPO_HomePage", () => {
 it('Ipo _Jainam', () => {
     cy.visit('https://ipo.jainam.in/#/startup')
-    cy.wait(3000)
-    cy.get(':nth-child(3) > .ng-star-inserted > .btn').click({force:true})
-    //Enter the userid
-    cy.wait(500)
-    cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('1126')
-    //click on continue button
-    cy.wait(500)
-    cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/button[1]').click()
-    // enter password
-    cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/div/div/div/kendo-textbox/input').type('J@inam$789')
-    //click on continue button
-    cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/button').click()
-    // enter the pin 
-    cy.get('#pin1').type(1)
-    cy.get('#pin2').type(2)
-    cy.get('#pin3').type(3)
-    cy.get('#pin4').type(4)
-    cy.wait(5000)
+    cy.wait(5000);
+    cy.viewport(1280, 720);
+
+    cy.get(":nth-child(3) > .ng-star-inserted > .btn").click();
+    cy.wait(3000);
+
+  // Enter Username
+  cy.xpath("//kendo-textbox[@id='user_id']//input[@type='text']").type('1126');
+
+  cy.wait(2000)
+     
+  cy.xpath("//button[normalize-space()='Continue']").click();
+
+  // Enter Password    
+  cy.xpath("//input[@placeholder='Enter Password']").type("J@inam$789");
+  cy.xpath("//button[normalize-space()='Continue']").click();
+
+  //Click on Login Button
+  cy.wait(3000);
+
+  // Enter OTP
+  cy.xpath("//input[@id='pin1']").type("1");
+  cy.xpath("//input[@id='pin2']").type("2");
+  cy.xpath("//input[@id='pin3']").type("3");
+  cy.xpath("//input[@id='pin4']").type("4");
+  cy.wait(5000);
     // cy.window().then((win) => {
     //   cy.stub(win, 'open').callsFake((url) => {
     //     win.location.href = url;
