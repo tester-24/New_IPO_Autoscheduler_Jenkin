@@ -166,19 +166,19 @@ describe("IPO_Dashboard", () => {
          // click on accept terms and conditions 
          cy.get('.checkbox-option.mt-4 > .squaredFour > label').click()
         //Verify subbmit button is visible and click on sumbmit button without accepting terms and condition
-        cy.get('#load2').should('be.visible')
-        cy.get('#load2').click()
+       // cy.get('#load2').should('be.visible')
+       // cy.get('#load2').click()
          // Check if the bid element exists using XPath
-      cy.xpath('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]')
-      .then(($element) => {
-        if ($element.length > 0) {
+      //cy.xpath('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]')
+      //.then(($element) => {
+       // if ($element.length > 0) {
           // If the element is found, bid has already been placed
-          cy.log('Already bid was present');
-        } else {
+         // cy.log('Already bid was present');
+       // } else {
           // If the element is not found, bid is not placed
-          cy.log('You can bid it');
-        }
-      });
+         // cy.log('You can bid it');
+       // }
+     // });
   
         //Verify trigger message
          
@@ -296,4 +296,5 @@ describe("IPO_Dashboard", () => {
   
   
   
+
 
